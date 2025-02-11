@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagenes</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <img id="gato" class="imagen" src="imagenes/gato1.jpg" alt="Gato">
+        <br>
+        <button class="boton" id="boton" onclick="cambiarImagen()">Pulsa</button>
+    </main>
+    <script>
+        var dormido = true;
+        function cambiarImagen(){
+            if (dormido == true) {
+                dormido = false;
+                var gato = document.getElementById("gato");
+                gato.src = "imagenes/jumping-gatito.gif";
+                var texto = document.getElementById("boton");
+                texto.textContent = "Duerme";
+            }else{
+                dormido = true;
+                gato = document.getElementById("gato");
+                gato.src = "imagenes/gato1.jpg";
+                texto = document.getElementById("boton");
+                texto.textContent = "Pulsa";
+            }
+            
+        }
+        
+
+      
+    </script>
+</body>
+</html>
